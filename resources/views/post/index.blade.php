@@ -9,6 +9,9 @@
                         Posts Overview
                     </div>
                     <div class="card-body">
+                        @if(auth()->user()->is_admin)
+                        <a href="{{ route('post.create') }}" class="btn btn-success mb-3">Create a Post</a>
+                        @endif
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
                             <tr>

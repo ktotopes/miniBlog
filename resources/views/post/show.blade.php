@@ -17,7 +17,9 @@
                 <div class="card shadow mb-5">
                     <div class="card-body">
                         <h2 class="card-title">{{ $post->title }}</h2>
-                        <span>{!! $post->content !!}</span>
+                        <div>
+                            <span>{!! $post->content !!}</span>
+                        </div>
                         <img src="{{$post->image}}" alt="">
                     </div>
                 </div>

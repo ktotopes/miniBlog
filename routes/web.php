@@ -25,6 +25,9 @@ Route::group([
         Route::get('/email/verify/{id}/{hash}', 'verify')->middleware('signed')->name('verify');
     });
 
+    Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+    Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
+
     Route::post('/comment', [CommentController::class, 'store'])->name('comment.add');
     Route::post('/comment/reply/{comment}', [CommentController::class, 'replyStore'])->name('reply.add');
 
